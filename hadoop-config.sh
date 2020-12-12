@@ -16,8 +16,7 @@ EOL
 source hadoop_vars.sh
 
 # configuracao hadoop-env.sh
-sed -i "\$aexport JAVA_HOME=$JAVA_HOME" $HADOOP_HOME/etc/hadoop/hadoop-
-env.sh
+sed -i "\$aexport JAVA_HOME=$JAVA_HOME" $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 
 # configuracao diretorio de logs
 if [ ! -d $HADOOP_HOME/logs ]; then
@@ -27,24 +26,26 @@ fi
 # configuracao do arquivo core-site.xml
 CORE_SITE=$HADOOP_HOME/etc/hadoop/core-site.xml
 mv $CORE_SITE $CORE_SITE.old
-cat >$CORE_SITE <<EOL
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<configuration>
-<property>
-<name>fs.defaultFS</name>
-<value>hdfs://localhost:9000</value>
-</property>
-<property>
-<name>hadoop.tmp.dir</name>
-<value>/home/${user.name}/hadooptmp</value>
-</property>
-</configuration>
-EOL
+
+{
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>'
+echo '<configuration>'
+echo '<property>'
+echo '<name>fs.defaultFS</name>'
+echo '<value>hdfs://localhost:9000</value>'
+echo '</property>'
+echo '<property>'
+echo '<name>hadoop.tmp.dir</name>'
+echo '<value>/home/${user.name}/hadooptmp</value>'
+echo '</property>'
+echo '</configuration>'
+} >> $CORE_SITE
 
 # configuracao arquivo hdfs-site.xml
 HDFS_SITE=$HADOOP_HOME/etc/hadoop/hdfs-site.xml
 mv $HDFS_SITE $HDFS_SITE.old
+
 cat >$HDFS_SITE <<EOL
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -59,6 +60,7 @@ EOL
 # configuracao yarn
 YARN_SITE=$HADOOP_HOME/etc/hadoop/yarn-site.xml
 mv $YARN_SITE $YARN_SITE.old
+
 cat >$YARN_SITE <<EOL
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
