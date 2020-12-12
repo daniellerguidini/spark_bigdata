@@ -108,5 +108,4 @@ yarn --daemon start nodemanager
 jps
 
 # execucao aplicacao pi
-hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-
-3.2.1.jar pi 16 1000
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar pi 16 1000
