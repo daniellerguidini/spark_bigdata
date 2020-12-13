@@ -7,5 +7,3 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y libicu-dev
 sudo apt-get install -y libxml2-dev
 
-# instalacao dependencias do pacote shiny
-sudo apt-get install -y make
