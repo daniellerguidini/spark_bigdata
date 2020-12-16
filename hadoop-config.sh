@@ -101,11 +101,10 @@ yarn --daemon start nodemanager
 jps
 
 # criacao dos diretorios no HDFS
-hdfs --daemon start namenode
-hdfs --daemon start datanode
-yarn --daemon start resourcemanager
-yarn --daemon start nodemanager
-jps
+hdfs dfs -mkdir -p /user/$USER
+hdfs dfs -chown $USER:$USER /user/$USER
+hdfs dfs -mkdir /tmp
+hdfs dfs -chmod 777 /tmp
 
 # execucao aplicacao pi
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar pi 16 1000
