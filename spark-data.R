@@ -9,6 +9,7 @@ sc <- spark_connect(master = "local")
 data_sp <- spark_read_csv(sc,
                           path = 'E:/Dropbox/Aula/Big Data/US_Accidents_June20.csv')
 
+#numero de acidentes por cidade
 city <- data_sp %>%
   group_by(City) %>%
   summarise(count = n()) %>%
@@ -22,6 +23,7 @@ ggplot(city %>% head() , aes(x = reorder(City, -count), y = count, fill = City))
        y = 'Count') +
   theme_minimal()
 
+#numero de acidentes por condicoes climaticas
 weather <- data_sp %>%
   group_by(Weather_Condition) %>%
   summarise(count = n()) %>%
