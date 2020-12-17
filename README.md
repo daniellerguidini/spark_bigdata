@@ -16,4 +16,8 @@ Os dados brutos são disponibilizados em formato tabular, organizados em 49 colu
 
 *Data Analysis: RStudio
 
+## Relatório
+Está disponível o relatório em pdf com o passo a passo da configuração do ambiente, instalação das ferramentas, análise dos dados e tudo o mais necessário para o desenvolvimento
+da aplicação.
+
 
