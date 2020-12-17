@@ -1,4 +1,6 @@
 # Gestão de Infraestrutura para Big Data
+> Daniel Klug, Danielle Rodrigues Guidini, Eduardo José Silva e Matheus da Conceição Evaldt
+
 Análise do dataset US Accidents, encontrado em: https://www.kaggle.com/sobhanmoosavi/us-accidents?select=US_Accidents_June20.csv
 
 O dataset selecionado agrupa cerca de 3,5 milhões de registros de acidentes de trânsito ocorridos entre fevereiro de 2016 e junho de 2020 em 49 estados dos Estados Unidos da 
