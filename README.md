@@ -8,9 +8,12 @@ de trânsito espalhados ao longo da malha rodoviária .
 Os dados brutos são disponibilizados em formato tabular, organizados em 49 colunas, e estão armazenados em arquivo com extensão CSV de aproximadamente 1.24GB de tamanho.
 
 ## Ferramentas
-*Máquina Virtual: sistema operacional Linux Ubuntu (64-bit), alocação de 4096 MB de memória e disco com alocação dinâmica com 10 GB de tamanho, em formato VDI.
+*Máquina Virtual: sistema operacional Linux Ubuntu (64-bit), alocação de 4096 MB de memória e disco com alocação dinâmica com 10 GB de tamanho, em formato VDI
+
 *Data Storage: HDFS (Hadoop Distributed File System)
+
 *Data Processing: Spark
+
 *Data Analysis: RStudio
 
 
