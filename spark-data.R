@@ -1,12 +1,11 @@
 library(sparklyr)
 library(dplyr)
 library(ggplot2)
-# spark_install(version = "1.6.2")
+spark_install(version = "1.6.2")
 options("scipen"=100, "digits"=8)
 sc <- spark_connect(master = "local")
 
-data_sp <- spark_read_csv(sc,
-                          path = 'E:/Dropbox/Aula/Big Data/US_Accidents_June20.csv')
+data_sp <- spark_read_csv(sc, path = 'data <- spark_read_csv(sc, path = 'hdfs:///user/hadoop/data/US_Accidents_June20.csv'))
 
 city <- data_sp %>%
   group_by(City) %>%
