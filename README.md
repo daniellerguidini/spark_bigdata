@@ -18,6 +18,6 @@ Os dados brutos são disponibilizados em formato tabular, organizados em 49 colu
 
 ## Relatório
 Está disponível o relatório em pdf com o passo a passo da configuração do ambiente, instalação das ferramentas, análise dos dados e tudo o mais necessário para o desenvolvimento
-da aplicação.
+da aplicação.Tamvém disponibilizamos um arquivo pdf com os slides da apresentação.
 
 
