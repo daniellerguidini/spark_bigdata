@@ -108,3 +108,9 @@ hdfs dfs -chmod 777 /tmp
 
 # execucao aplicacao pi
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar pi 16 1000
+
+# colocando dados no hdfs
+wget https://www.kaggle.com/sobhanmoosavi/us-accidents/download/p44lgYpA1uUpTDM3fEsI%2Fversions%2FwKHtUqkV3F3MxwHzTgwL%2Ffiles%2FUS_Accidents_June20.csv
+tar -xf US_Accidents_June20.tar.gz
+hdfs dfs -mkdir /user/hadoop/data
+hdfs dfs -put US_Accidents_June20.csv /user/hadoop/data
